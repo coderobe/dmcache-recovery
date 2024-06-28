@@ -198,7 +198,7 @@ def make_block_device(file_path, *, write=False):
     stdout = run_get_stdout(
         "losetup",
         *([] if write else ["--read-only"]),
-        "--find", "--nooverlap", "--show",
+        "--find", "--show",
         #"--offset", "bytes",
         #"--sizelimit", "bytes",
         str(file_path),
